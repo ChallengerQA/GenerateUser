@@ -1,4 +1,4 @@
-name: Java CI with Gradle
+name: Remote user generation execution via GitHub infrastructure
 
 on:
   workflow_dispatch:  
