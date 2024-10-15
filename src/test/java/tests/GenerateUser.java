@@ -36,7 +36,7 @@ public class GenerateUser {
         // Получение содержимого из downloadUrl
         String messageContent = MailSpec.getMessageContent(token, downloadUrl);
 
-        // Извлечение токена из сообщения с помощью нового класса
+        // Извлечение токена из сообщения 
         String confirmationToken = SuccessTokenExtractor.extractTokenFromMessage(messageContent);
         if (confirmationToken == null) {
             throw new RuntimeException("Confirmation token not found in the message content");
