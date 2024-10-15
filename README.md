@@ -12,7 +12,7 @@
 
 1. **Откройте вкладку "Actions"** в данном репозитории на GitHub.
    
-2. **Выберите нужный workflow**: Найдите и выберите workflow. Обычно он называется `Remote user generation execution via GitHub infrastructure`.
+2. **Выберите нужный workflow**: Найдите и выберите workflow. Он называется `Remote user generation execution via GitHub infrastructure`.
 
 3. **Запустите workflow**:
    - Нажмите на кнопку **"Run workflow"**.
