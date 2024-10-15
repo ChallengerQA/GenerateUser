@@ -2,7 +2,7 @@ package spec;
 
 import static io.restassured.RestAssured.given;
 
-public class DropsAuthSpec1 {
+public class DropsAuthSpec {
     private static final String BASE_URL = "https://api2.icodrops.com/portfolio/api/user/";
 
     public static void createUser(UserSpec user) {
