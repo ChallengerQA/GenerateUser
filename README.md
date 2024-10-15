@@ -1,4 +1,4 @@
-# Проект #1
+# Проект #1 Random User Generation
 
 ## Описание
 
