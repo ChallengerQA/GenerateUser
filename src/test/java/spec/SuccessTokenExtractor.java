@@ -9,18 +9,16 @@ import java.util.regex.Pattern;
 
 public class SuccessTokenExtractor {
     public static String extractTokenFromMessage(String messageContent) {
-        // Декодируем MIME-контент
+
         String decodedContent = decodeMimeContent(messageContent);
-        // Декодируем HTML-сущности
+
         String htmlDecodedContent = StringEscapeUtils.unescapeHtml4(decodedContent);
 
-        // Регулярное выражение для извлечения токена
         String pattern = "token=3D([\\w-]+)";
         Pattern r = Pattern.compile(pattern);
         Matcher m = r.matcher(htmlDecodedContent);
 
         if (m.find()) {
-            // Возвращаем токен без префикса "3D"
             return m.group(1);
         }
         return null;
@@ -28,7 +26,6 @@ public class SuccessTokenExtractor {
 
     private static String decodeMimeContent(String content) {
         try {
-            // Декодируем MIME-контент
             return MimeUtility.decodeText(content);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
