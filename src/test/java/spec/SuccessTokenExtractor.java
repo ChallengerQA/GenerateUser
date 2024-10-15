@@ -7,7 +7,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class SuccessTokenExtractor1 {
+public class SuccessTokenExtractor {
     public static String extractTokenFromMessage(String messageContent) {
         // Декодируем MIME-контент
         String decodedContent = decodeMimeContent(messageContent);

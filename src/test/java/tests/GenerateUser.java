@@ -11,7 +11,7 @@ import java.io.IOException;
 
 import static io.restassured.RestAssured.given;
 
-public class GenerateUser1 {
+public class GenerateUser {
 
     @Test
     void fullFlowCreateUserAndCheckMessages() throws InterruptedException, IOException {

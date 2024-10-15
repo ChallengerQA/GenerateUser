@@ -8,7 +8,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 
-public class MailSpec1 {
+public class MailSpec {
 
     private static final String BASE_URL = "https://api.mail.tm";
 

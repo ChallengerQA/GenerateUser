@@ -2,7 +2,7 @@ package spec;
 
 import java.util.UUID;
 
-public class UserSpec1 {
+public class UserSpec {
 
 
     private String username;

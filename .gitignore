@@ -1,4 +1,4 @@
-HELP.md1
+HELP.md
 build/
 !**/src/main/**
 !**/src/test/**
