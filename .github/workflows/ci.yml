@@ -9,34 +9,29 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3 
+      uses: actions/checkout@v2
 
     - name: Set up JDK 11
-      uses: actions/setup-java@v3  
+      uses: actions/setup-java@v1
       with:
-        distribution: 'temurin' 
         java-version: '11'
 
     - name: Cache Gradle packages
-      uses: actions/cache@v3 
+      uses: actions/cache@v2
       with:
-        path: |
-          ~/.gradle/caches
-          ~/.gradle/wrapper  
-        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }} 
+        path: ~/.gradle/caches
+        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
         restore-keys: |
           ${{ runner.os }}-gradle-
 
     - name: Build with Gradle
-      run: ./gradlew build --no-daemon 
+      run: ./gradlew build
 
     - name: Run tests
-      run: ./gradlew test --no-daemon --info 
+      run: ./gradlew test --info 
 
     - name: Show test output logs
-      if: failure()  
-      run: cat build/reports/tests/test/index.html
+      run: cat build/reports/tests/test/index.html  
 
     - name: Show console output
-      if: failure()  
       run: cat build/test-results/test/*.xml  
