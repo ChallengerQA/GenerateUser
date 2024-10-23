@@ -18,7 +18,7 @@ public class UserSpec {
     public static UserSpec generateRandomUser() {
         String email = "monkey" + UUID.randomUUID().toString().substring(0, 4) + "@adosnan.com";
         String password = "123123";
-        String username = "monkeyy" + UUID.randomUUID().toString().substring(0, 8);
+        String username = "monkeyy1" + UUID.randomUUID().toString().substring(0, 8);
         return new UserSpec(username, email, password);
     }
 
